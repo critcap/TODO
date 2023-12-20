@@ -1,10 +1,10 @@
-<div>
+<div class="rounded">
   <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
 
-  <div class="">
+  <div>
     <table class="todo-table">
-      <thead>
-        <tr class="head-row" style="user-select: none">
+      <thead >
+        <tr class="head-row dark-cool" style="user-select: none">
           <th style="width: 05%;" class="status-col" scope="col">&nbsp;</th>
           <th style="width: 05%;" class="priority-col">&nbsp;</th>
           <th style="width: 10%;" class="id-col">ID</th>
@@ -17,9 +17,9 @@
           </ng-container>
         </tr>
       </thead>
-      <tbody>
+      <tbody >
         <ng-container *ngFor="let todo of dataTableService.todoList()">
-          <tr class="rows">
+          <tr class="rows mid">
             <td style="user-select: none">
               <ng-container *ngIf="todo.status != Status.DONE">
                 <button style="border: 0px transparent; background: transparent" (click)="nextStatus(todo)"><mat-icon>{{todo.status.button}}</mat-icon></button>
@@ -31,26 +31,26 @@
 
             <td style="user-select: none">
               <mat-icon style="background-color: transparent; border: none; width: 50px; margin-left: -10px">
-                <select style="background-color: transparent; border: none; box-shadow: none; color: #888888" [(ngModel)]="todo.priority" (ngModelChange)="dataTableService.save()">
-                  <option [ngValue]="Priority.UNASSIGNED" style="background-color: #222222; border: none">{{Priority.UNASSIGNED.button}}</option>
-                  <option [ngValue]="Priority.LOW" style="background-color: #222222; border: none">{{Priority.LOW.button}}</option>
-                  <option [ngValue]="Priority.HIGH" style="background-color: #222222; border: none">{{Priority.HIGH.button}}</option>
+                <select style="background-color: transparent; border: none; box-shadow: none; color: #343434" [(ngModel)]="todo.priority" (ngModelChange)="dataTableService.save()">
+                  <option [ngValue]="Priority.UNASSIGNED" style="background-color: red; border: none">{{Priority.UNASSIGNED.button}}</option>
+                  <option [ngValue]="Priority.LOW" class="mid" style="background-color: yellow; border: none">{{Priority.LOW.button}}</option>
+                  <option [ngValue]="Priority.HIGH" style="background-color: green; border: none">{{Priority.HIGH.button}}</option>
                 </select>
               </mat-icon>
             </td>
 
-            <td style="user-select: none">{{todo.id}}</td>
+            <td style="user-select: none" class="rows-content">{{todo.id}}</td>
 
             <td>
-              <input style="background: transparent; border: transparent; width: 610px; color: #888888" [(ngModel)]="todo.name" (ngModelChange)="dataTableService.save()">
+              <input class="rows-content " style="width: 610px;" [(ngModel)]="todo.name" (ngModelChange)="dataTableService.save()">
             </td>
 
             <td>
-              <input style="width: 120px; border: transparent; background-color: transparent; color: #888888; user-select: none" (ngModelChange)="dataTableService.save()" (keyup.enter)="dataTableService.save()" [(ngModel)]="todo.until" type="date">
+              <input class="rows-content user-select" (ngModelChange)="dataTableService.save()" (keyup.enter)="dataTableService.save()" [(ngModel)]="todo.until" type="date">
             </td>
 
             <td>
-              <select [(ngModel)]="todo.category" style="user-select: none; width: 200px; background-color: transparent; border: none; box-shadow: none; color: #888888" (ngModelChange)="dataTableService.save()">
+              <select class="rows-content" [(ngModel)]="todo.category" style="user-select: none; width: 200px" (ngModelChange)="dataTableService.save()">
                 <option *ngFor="let category of dataTableService.categories" style="background-color: #222222; border: none" [ngValue]="category">{{category.name}}</option>
               </select>
             </td>

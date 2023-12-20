@@ -1,14 +1,17 @@
 * {
-  color: aliceblue;
+  font-family: "Roboto", sans-serif;
+  color: aqua;
 }
 
 .brand-logo {
   user-select: none;
   margin: 0px 15px 0px 10px;
-  font-size: 20px;
+  font-size: 25px;
+  font-weight: bolder;
 }
 
 .nav-item {
   margin: 0px 10px 0px 10px;
-  font-size: 16px;
+  font-size: 20px;
+  font-weight: medium;
 }

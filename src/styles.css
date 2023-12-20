@@ -1,4 +1,45 @@
 /* You can add global styles to this file, and also import other style files */
+@import '../node_modules/bootstrap/dist/css/bootstrap.css';
 
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.rounded {
+  border-radius: 2px;
+  border: #FAEED1 solid 2px;
+  background-color: transparent;
+}
+
+.centered{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.transparent{
+  background-color: transparent;
+  border: 0cap;
+  border-color: transparent;
+}
+
+.light{
+  background-color: #FDF7E4;
+}
+.mid{
+  background-color: #FAEED1;
+}
+.mid-dark{
+  background-color: #DED0B6;
+}
+.dark-cool{
+  background-color: #BBAB8C;
+}
+.primary{
+  background-color: #0d6efd ;
+}
+.font-light{
+  color: #3F2E3E;
+}
+.font-dark-2{
+  color: #331D2C;
+}

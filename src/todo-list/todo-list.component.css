@@ -1,11 +1,11 @@
 .mat-icon {
-  color: #888888;
+  color: #343434;
   transition: 0.5s;
   margin: 5px;
 }
 .mat-icon:nth-child(odd) {
   transition: 0.5s;
-  color: #bbbbbb;
+  color: #343434;
 }
 
 .thead {
@@ -13,8 +13,7 @@
 }
 
 .head-row {
-  background-color: #222222;
-  color: darkgray;
+  color: #343434
 }
 
 .todo-table {
@@ -22,21 +21,33 @@
 }
 
 .rows {
-  background-color: #222222;
   transition: 0.5s;
   height: 40px;
-  color: #888888;
-  border: #333333 1px solid;
+  color: #343434 ;
   font: 18px Arial bold;
 }
 
 .rows:nth-child(odd) {
-  background-color: #333333;
+  background-color: #DED0B6;
 }
 
 .rows:hover {
-  background-color: #444444;
-  transition: 0.5s;
-  color: #bbbbbb;
-  border: #444444 1px solid;
+  background-color: #BBAB8C;
+  transition: 0.2s;
+  color: white;
+  height: 72px;
+  font-family: Arial, Helvetica, sans-serif;
 }
+
+.rows-content {
+  font-family: Helvetica;
+  font-size: 16px;
+  font-weight: bold;
+    background: transparent;
+    border: transparent;
+    color: #343434;
+    user-select: none;
+  }
+  .user-select {
+    user-select: none;
+  }

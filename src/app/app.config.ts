@@ -7,11 +7,3 @@ import {environment} from "../objects/Enviroment";
 import firebase from "firebase/compat";
 import initializeApp = firebase.initializeApp;
 import {provideFirebaseApp} from "@angular/fire/app";
-
-// export const appConfig: ApplicationConfig = {
-  // providers: [provideRouter(routes),
-  //   importProvidersFrom([
-  //     provideFirebaseApp(() => initializeApp(environment.firebase)),
-  //     provideFirestore(() => getFirestore()),
-  //   ])]
-// };
